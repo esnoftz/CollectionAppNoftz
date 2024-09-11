@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var numbers: [Int] = []
     
     // #8
-    var wordy: [String: String] = [:]
+    var schools: [String: String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,41 +50,63 @@ class ViewController: UIViewController {
         }
         
         // #9
-        wordy["CLC"] = "Crystal Lake Central High School"
-        wordy["CG"] = "Cary Grove High School"
-        wordy["PR"] = "Prairie Ridge High School"
+        schools["CLC"] = "Crystal Lake Central High School"
+        schools["CG"] = "Cary Grove High School"
+        schools["PR"] = "Prairie Ridge High School"
         
         // #10
-        print(wordy["CLC"]!)
+        print(schools["CLC"]!)
         
         // #11
-        wordy["CLS"] = "Crystal Lake South High School"
+        schools["CLS"] = "Crystal Lake South High School"
         
         // #12
-        for(key, value) in wordy {
+        for(key, value) in schools {
             print("\(key)  \(value)")
         }
         
         // #13
-        for(key, _) in wordy {
+        for(key, _) in schools {
             print("\(key)")
         }
         
         // #14
-        for(_, value) in wordy {
+        for(_, value) in schools {
             print("\(value)")
         }
         
         // #15
-        var schoolKeys = wordy.keys.sorted()
+        var schoolKeys = schools.keys.sorted()
         for i in 0..<schoolKeys.count{
             var currentKey = schoolKeys[i]
-            print(currentKey)
-            //print(currentKey + ": " + (wordy[i])
+            print("\(currentKey)  \(schools[currentKey]!)")
         }
         
+        // #16
+        var randomInt = Int.random(in: 5...7)
         
-                
+        // #17
+        switch randomInt{
+            case 5:
+                print("You got 5!")
+            case 6:
+                print("You got 6!")
+            case 7:
+                print("You got 7!")
+            default:
+                print("Error!")
+        }
+        
+        // #18
+        var person: (name: String , age: Int, gpa: Double)
+        
+        // #19
+        person.name = "Greg"
+        person.age = 17
+        person.gpa = 2.9
+        
+        // #20
+        print("Name: \(person.name)\t Age: \(person.age)\t GPA: \(person.gpa)")
         
         
         
